@@ -45,11 +45,11 @@ def apply_coupons(cart, coupons)
   if coupons.length == 0
     return cart
   end
-  temp_cart = []
-  cart.each do |k , v|
-    temp_cart << {k => v}
-  end
-  cart = consolidate_cart(temp_cart)
+  # temp_cart = []
+  # cart.each do |k , v|
+  #   temp_cart << {k => v}
+  # end
+  # cart = consolidate_cart(temp_cart)
   # binding.pry
   coupons.each do |coupon|
     cart.each do |item|
