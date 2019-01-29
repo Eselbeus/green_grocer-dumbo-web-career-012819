@@ -29,20 +29,21 @@ def consolidate_cart(cart)
     end
   end
   final_cart
+  binding.pry
 end
 consolidate_cart([
-  {"AVOCADO" => {:price => 3.0, :clearance => true, :count => 2 }},
+  # {"AVOCADO" => {:price => 3.0, :clearance => true, :count => 2 }},
   {"AVOCADO" => {:price => 3.0, :clearance => true }},
-  {"AVOCADO" => {:price => 3.0, :clearance => true, :count => 2 }},
-  {"KALE"    => {:price => 3.0, :clearance => false}},
-  {"AVOCADO" => {:price => 3.0, :clearance => true }}
+  # {"AVOCADO" => {:price => 3.0, :clearance => true, :count => 2 }},
+  # {"KALE"    => {:price => 3.0, :clearance => false}},
+  # {"AVOCADO" => {:price => 3.0, :clearance => true }}
 ])
 
 def apply_coupons(cart, coupons)
   # code here
   # cart2 = consolidate_cart(cart)
   new_cart = {}
-  binding.pry
+  # binding.pry
   if coupons.length == 0
     return cart
   end
