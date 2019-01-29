@@ -49,8 +49,8 @@ def apply_coupons(cart, coupons)
   cart.each do |k , v|
     temp_cart << {k => v}
   end
-  cart2 = consolidate_cart(temp_cart)
-  binding.pry
+  cart = consolidate_cart(temp_cart)
+  # binding.pry
   coupons.each do |coupon|
     cart.each do |item|
       
