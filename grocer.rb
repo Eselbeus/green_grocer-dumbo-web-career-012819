@@ -40,12 +40,17 @@ consolidate_cart([
 
 def apply_coupons(cart, coupons)
   # code here
-  # cart2 = consolidate_cart(cart)
   new_cart = {}
   # binding.pry
   if coupons.length == 0
     return cart
   end
+  temp_cart = []
+  cart.each do |k , v|
+    temp_cart << {k => v}
+  end
+  cart = consolidate_cart(temp_cart)
+  binding.pry
   coupons.each do |coupon|
     cart.each do |item|
       
