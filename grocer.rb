@@ -32,7 +32,7 @@ def consolidate_cart(cart)
 end
 consolidate_cart([
   # {"AVOCADO" => {:price => 3.0, :clearance => true, :count => 2 }},
-  {"AVOCADO" => {:price => 3.0, :clearance => true }},
+  # {"AVOCADO" => {:price => 3.0, :clearance => true }},
   # {"AVOCADO" => {:price => 3.0, :clearance => true, :count => 2 }},
   # {"KALE"    => {:price => 3.0, :clearance => false}},
   # {"AVOCADO" => {:price => 3.0, :clearance => true }}
