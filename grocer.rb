@@ -40,8 +40,9 @@ consolidate_cart([
 
 def apply_coupons(cart, coupons)
   # code here
+  cart2 = consolidate_cart(cart)
   new_cart = {}
-  # binding.pry
+  binding.pry
   if coupons.length == 0
     return cart
   end
