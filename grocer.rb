@@ -28,7 +28,7 @@ def consolidate_cart(cart)
       end
     end
   end
-  final_cart
+  [final_cart]
   # binding.pry
 end
 consolidate_cart([
