@@ -42,23 +42,24 @@ def apply_coupons(cart, coupons)
   # code here
   new_cart = {}
   # binding.pry
-  coupons.each do |coupon|
-    cart.each do |item|
+  if coupons.length != 0
+    coupons.each do |coupon|
+      cart.each do |item|
+        
+        price = item[1][:price]
+        count = item[1][:count]
+        
+        no_coupon_data = {:price => price, :clearance => item[1][:clearance], :count => count - coupon[:num]}
       
-      price = item[1][:price]
-      count = item[1][:count]
-      
-      no_coupon_data = {:price => price, :clearance => item[1][:clearance], :count => count - coupon[:num]}
-    
-      if item[1][:count] - coupon[:num] != 0
-        new_cart[item[0]] = no_coupon_data
+        if item[1][:count] - coupon[:num] != 0
+          new_cart[item[0]] = no_coupon_data
+        end
+        
+        item[1][:price] = coupon[:cost]
+        item[1][:count] = 1
+        new_cart["#{item[0]} W/COUPON"] = item[1]
       end
-      
-      item[1][:price] = coupon[:cost]
-      item[1][:count] = 1
-      new_cart["#{item[0]} W/COUPON"] = item[1]
     end
-  end
   new_cart
   # binding.pry
 end
