@@ -28,8 +28,7 @@ def consolidate_cart(cart)
       end
     end
   end
-  [final_cart]
-  # binding.pry
+  final_cart
 end
 consolidate_cart([
   # {"AVOCADO" => {:price => 3.0, :clearance => true, :count => 2 }},
